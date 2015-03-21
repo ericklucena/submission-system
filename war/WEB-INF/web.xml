@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <servlet>
+    <servlet-name>Upload</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.Upload</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadAp</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.UploadAp</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Download</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.Download</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>runServer</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.runServerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>runApServer</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.runApServerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SignUp</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.SignUp</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Serve</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.Serve</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadAll</servlet-name>
+    <servlet-class>co.codehaven.submissionsystem.submission.DownloadAll</servlet-class>
+  </servlet>
+  
+ 
+  <servlet-mapping>
+    <servlet-name>Upload</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadAp</servlet-name>
+    <url-pattern>/uploadAp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Download</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>runServer</servlet-name>
+    <url-pattern>/runServer</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>runApServer</servlet-name>
+    <url-pattern>/runApServer</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Serve</servlet-name>
+    <url-pattern>/serve</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>DownloadAll</servlet-name>
+    <url-pattern>/downloadAll</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+    <servlet-name>SignUp</servlet-name>
+    <url-pattern>/signUp</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+</web-app>
